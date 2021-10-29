@@ -85,20 +85,20 @@
         color: black;
     }
 
-    #formulario{
+    #formulario {
         max-width: 370px;
     }
 
     .caixa {
         display: inline-table;
         margin: 20px;
-        max-width: 280px;
-        height: auto;
         padding-bottom: 10px;
     }
-    .caixa:hover{
-          max-width :290px;
-          transition: 1s;
+
+    .caixa:hover {
+        max-width: 305px;
+        height: 60.5vh;
+        transition: 1s;
     }
 
     input.aderir {
@@ -109,15 +109,17 @@
         background-color: var(--cor1);
         color: var(--cor5);
         font-weight: bold;
-        padding: 11px;
+        padding: 10px;
         transition-duration: 100ms, 500ms, 100ms;
         transition-delay: 100ms;
         transition: 500ms;
     }
-    #contacto{
+
+    #contacto {
         padding: 60px;
     }
-    #contacto h4{
+
+    #contacto h4 {
         padding-top: 20px;
     }
 
@@ -146,14 +148,9 @@
         width: auto;
     }
 
-        nav ul {
+    nav ul {
         transform: translate(-30%, 50%);
     }
-
-    .aderir {
-        top: 40%;
-    }
-
 }
 
 @media screen and (min-width: 800px) {
@@ -181,6 +178,7 @@
         height: 100vh;
         padding-bottom: 600px;
     }
+
     #creditos p#p {
         border-bottom: solid var(--cor1);
         padding-bottom: 20px;

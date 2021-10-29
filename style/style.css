@@ -19,6 +19,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: url("../imagens/photo4.jpeg") no-repeat;
+    background-size: cover;
 }
 
 header {
@@ -141,12 +142,11 @@ input[type="submit"] {
 }
 
 .caixa {
-    position: relative;
     border: 2px solid var(--cor1);
-    margin: 10px auto;
+    margin: 30px auto;
     min-width: 200px;
-    max-width: 250px;
-    height: 300px;
+    max-width: 300px;
+    min-height: 25em;
 }
 
 .caixa h3 {
@@ -156,15 +156,14 @@ input[type="submit"] {
     margin-bottom: 30px;
 }
 
-.caixa p {
-    padding: 10px;
+#creditos .caixa p {
+    padding: 15px;
     margin: auto;
 }
 
 .aderir {
     width: 65%;
-    position: relative;
-    top: 25%;
+    transform: translate(0px, 100%);
     color: var(--cor1);
     padding: 10px;
     border-radius: 20px;
@@ -213,4 +212,16 @@ footer {
 
 footer p {
     padding: 10px;
+}
+
+@media screen and (min-height: 300px) {
+    #home{
+        height: auto;
+    }
+}
+
+@media screen and (min-height: 380px){
+    #home{
+        height: 100vh;
+    } 
 }
