@@ -1,48 +1,48 @@
-@media screen and (min-width: 400px) {
-    @keyframes changeimage {
-        15% {
-            background: url(../imagens/imagem2.jpg);
-            background-size: cover;
-        }
-
-        25% {
-            background: url(../imagens/imagem5.jpg);
-            background-size: cover;
-        }
-
-        50% {
-            background: url(../imagens/imagem6.jpg);
-            background-size: cover;
-        }
-
-        100% {
-            background: url(../imagens/imagem7.jpg);
-            background-size: cover;
-        }
+@keyframes changeimage {
+    from {
+        background: url(../imagens/imagem8.jpg) no-repeat;
+        background-size: contain;
     }
 
-    body {
-        animation-name: changeimage;
-        animation-duration: 10s;
-        animation-direction: alternate;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        animation-play-state: running;
-        background-size: cover;
+    to {
+        background: url(../imagens/imagem7.jpg) no-repeat;
     }
 
+}
+
+@keyframes mover {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (min-width: 570px) {
+    body{
+        font-size: larger;
+    }
     header {
-        position: relative;
-        background: none;
-        background-color: rgba(0, 0, 0, 0.651);
+        color: white;
         padding: 10px;
         display: flex;
+        background-color: transparent;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    header div#logotipo {
-        width: 300px;
-        transform: translateX(-15%);
+    header.sticky {
+        transition: 0.2s;
+        background-color: var(--cor5);
+        padding: 0px;
+        border-bottom: 1px solid var(--cor1);
+    }
+
+    header.sticky nav ul li a {
+        color: var(--cor1);
+
     }
 
     #btMenu {
@@ -50,143 +50,178 @@
     }
 
     nav {
-        display: block;
+        width: fit-content;
         background: none;
-        width: 50%;
+        animation-name: aparecer;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-iteration-count: 2s;
+        display: inline-block;
+        padding-right: 50px;
     }
 
     nav ul {
-        transform: translate(0px, 3%);
+        list-style: none;
     }
 
     nav ul li {
-        display: inline-block;
-        padding: 5px;
+        display: inline;
+        padding: 2px;
         border: none;
+        animation-name: mover;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        margin-left: 10px;
     }
 
     nav ul li a {
         color: white;
-        font-size: medium;
-        text-decoration: none;
+        padding: 2px;
+        border: none;
         transition-property: background-color, padding, border-radius;
         transition-duration: 100ms, 1s, 100ms;
         transition-delay: 100ms;
     }
 
     #menu a:hover {
-        padding: 10px;
+        padding: 5px;
         border-radius: 2px;
         color: var(--cor3);
     }
 
-    #sub:hover {
-        background-color: var(--cor3);
-        color: black;
+    #btMenu {
+        padding-left: 50px;
     }
 
-    #formulario {
-        max-width: 370px;
+    div>.circulo {
+        margin-top: -40px;
     }
+
+    .tras {
+        margin-top: -600px;
+
+        border-radius: 50%;
+        position: absolute;
+        left: 5px;
+    }
+
+    #stxt {
+        text-align: justify;
+        width: 50%;
+        padding-left: 30px;
+    }
+
+    .give {
+        display: block;
+        width: 50%;
+        float: left;
+        padding: 10px;
+    }
+
+
+    .gives li,
+    .gives h2 {
+        padding: 10px;
+    }
+
+    .frente {
+        margin-top: -600px;
+        border-radius: 50%;
+        position: absolute;
+        right: 5px;
+    }
+
+
+    #creditos {
+        font-size: larger;
+    }
+
 
     .caixa {
-        display: inline-table;
-        margin: 20px;
-        padding-bottom: 10px;
+        position: relative;
+        min-height: 50vh;
+        width: 50%;
+        min-height: 55vh;
+
     }
 
-    .caixa:hover {
-        max-width: 305px;
-        height: 60.5vh;
-        transition: 1s;
+    .caixa h3,
+    .caixa p {
+        padding: 15px;
     }
 
-    input.aderir {
+    .conteiner {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .conteiner #formulario {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgBx {
+        display: block;
+        position: relative;
+        width: 40%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .imgBx::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 90%;
+        height: 100%;
+        background-color: var(--cor3);
+        transform-origin: bottom;
+        transform: skewX(50deg) translateX(0%);
+    }
+
+    .imgBx img {
+        width: 80%;
+        max-height: 100%;
+    }
+
+    .aderir {
+        position: absolute;
+        bottom: 2%;
+        left: 20%;
         transition-property: backgrand-color, padding;
     }
 
-    input.aderir:hover {
+    .aderir:hover {
+        bottom: 5px;
         background-color: var(--cor1);
         color: var(--cor5);
         font-weight: bold;
-        padding: 10px;
+        padding: 11px;
         transition-duration: 100ms, 500ms, 100ms;
         transition-delay: 100ms;
         transition: 500ms;
     }
 
-    #contacto {
-        padding: 60px;
+    #local h4 {
+        display: inline-block;
+        margin-left: 80px;
+        padding: 10px;
     }
 
-    #contacto h4 {
-        padding-top: 20px;
+    strong {
+        font-style: oblique;
+        font-size: 18px;
+        color: var(--cor1);
     }
 
-    #contacto #logotipo {
-        width: 50%;
-        margin: auto;
+    .maior {
+        font-size: 30px;
     }
 
-    #celular::before {
-        content: "\f095";
-    }
-}
-
-@media screen and (min-width: 500px) {
-    nav {
-        width: 60%;
-    }
-
-    nav ul {
-        transform: translate(-20%, 50%);
-    }
-}
-
-@media screen and (min-width: 600px) {
-    nav {
-        width: auto;
-    }
-
-    nav ul {
-        transform: translate(-30%, 50%);
-    }
-}
-
-@media screen and (min-width: 800px) {
-    #home {
-        position: relative;
-    }
-
-    #texto {
-        font-size: larger;
-        max-width: 450px;
-        position: absolute;
-        left: 10%;
-        top: 20%;
-    }
-
-    #formulario {
-        position: absolute;
-        right: 10%;
-        top: 20%;
-    }
-
-    #creditos {
-        font-size: larger;
-        padding-top: 80px;
-        height: 100vh;
-        padding-bottom: 600px;
-    }
-
-    #creditos p#p {
-        border-bottom: solid var(--cor1);
-        padding-bottom: 20px;
-        width: 50%;
-        margin-left: 305px;
-    }
-
-    .caixa {
-        font-size: large;
+    #logotipo {
+        text-align: center;
     }
 }
