@@ -148,12 +148,12 @@ main {
 }
 
 .slide1 {
-    background-image: url("/imagens/imagem5.jpg");
+    background-image: url("../imagens/imagem5.jpg");
     background-size: cover;
 }
 
 .slide2 {
-    background-image: url("/imagens/imagem4.jpg");
+    background-image: url("../imagens/imagem4.jpg");
     background-size: cover;
 
 }
@@ -252,7 +252,7 @@ main {
 
 #imagens {
     box-sizing: border-box;
-    background: url(../imagens/imagem7.jpg)no-repeat;
+    background: url("../imagens/imagem7.jpg")no-repeat;
     width: 40%;
     height: 400px;
     animation-name: changeimage;
@@ -302,7 +302,7 @@ h2 img {
 }
 
 #creditos {
-    background-image: url("/imagens/i06.jpg");
+    background-image: url("../imagens/i06.jpg");
     background-size: cover;
     text-align: center;
     min-height: 100vh;

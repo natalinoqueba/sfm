@@ -99,7 +99,6 @@
 
     .tras {
         margin-top: -600px;
-
         border-radius: 50%;
         position: absolute;
         left: 5px;
@@ -107,7 +106,7 @@
 
     #stxt {
         text-align: justify;
-        width: 50%;
+        width: 70%;
         padding-left: 30px;
     }
 
