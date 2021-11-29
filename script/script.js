@@ -11,6 +11,7 @@ const circulo2 = document.getElementById("c2");
 let nav = document.getElementById("menu");
 function menu() {
   if (on === 0) {
+    
     nav.style.display = "inline-block";
     on = 1;
     botao.src = "imagens/menu-x.png";
@@ -82,4 +83,6 @@ function mudarProv(boatao, prov) {
 window.addEventListener("scroll", () => {
   let header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 0);
+ 
 });
+

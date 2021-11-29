@@ -99,6 +99,7 @@
 
     .tras {
         margin-top: -600px;
+
         border-radius: 50%;
         position: absolute;
         left: 5px;
@@ -106,7 +107,7 @@
 
     #stxt {
         text-align: justify;
-        width: 70%;
+        width: 100%;
         padding-left: 30px;
     }
 
@@ -132,7 +133,7 @@
 
 
     #creditos {
-        font-size: larger;
+    margin-bottom: 50px;
     }
 
 
@@ -223,4 +224,79 @@
     #logotipo {
         text-align: center;
     }
+}
+
+/*sobre nos update extra*/
+.visao{
+ 
+    background-color: white;
+}
+.sconteudo{
+    margin-top:50px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    
+}
+.sobre_nos{
+    width: 40%;
+ 
+}
+.sobre_nos h3{
+    margin-bottom:20px;
+    font-weight: bold;
+    margin-top: 40px;
+    text-indent: 20px;
+}
+
+.imagem{
+    margin-top: 50px;
+    width: 50%;
+    height: 50vh;
+    
+
+}
+#imagem0{
+    background: url(../imagens/photo4.jpeg) no-repeat;
+    background-size: cover;
+  
+}
+#imagem1{
+background:url(../imagens/imagem4.jpg)no-repeat;
+background-size: cover;
+}
+#imagem2{
+    background: url(../imagens/imagem8.jpg) no-repeat;
+    background-size: cover;
+}
+#imagem3{
+    background: url(../imagens/i01.jpg) no-repeat;
+    background-size: cover;
+}
+#imagem4{
+    background: url(../imagens/i06.jpg)no-repeat;
+    background-size: cover;
+  
+}
+#logofinal{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+#logofinal img{
+    margin: auto;
+}
+#logofinal h3{
+    text-align: center;
+    
+}
+.lm:hover{
+    transition: 500ms;
+  text-decoration: underline;
 }
