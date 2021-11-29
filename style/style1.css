@@ -113,24 +113,52 @@ main {
     display: none;
 }
 
-#rad1:checked~#slide {
-    transition: 1s;
-    margin-left: 0%;
+@keyframes a {
+    0% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+
 }
 
-#rad2:checked~#slide {
+
+
+#rad1:checked~#slide {
+    margin-left: 0%;
     transition: 1s;
+}
+
+
+#rad2:checked~#slide {
     margin-left: -100%;
+    transition: 1s;
+
+}
+
+#rad3:checked~#slide {
+    margin-left: -200%;
+    transition: 1s;
+
+}
+
+#rad4:checked~#slide {
+    animation: a 1 5s;
+    transition: 1s;
+
 }
 
 #slide {
-    width: 200%;
+    animation-fill-mode: both;
+    width: 400%;
     height: 100vh;
     display: flex;
 }
 
 .texto {
-    width: 100%;
+    width: 400%;
     height: 100vh;
 }
 
@@ -156,7 +184,11 @@ main {
 .slide2 {
     background-image: url("/imagens/imagem4.jpg");
     background-size: cover;
+}
 
+.slide3 {
+    background-image: url("/imagens/imagem8.jpg");
+    background-size: cover;
 }
 
 #btSlides {
@@ -167,6 +199,10 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: -40px;
+}
+
+.circulo {
+    position: relative;
 }
 
 #btSlides div {
@@ -213,8 +249,6 @@ main {
 }
 
 #sobre h2 {
-    padding: auto;
-    padding: auto;
     padding-top: 30px;
     text-align: center;
     color: var(--cor1);
@@ -222,7 +256,6 @@ main {
 
 #sobrenos {
     display: flex;
-    padding: 10px;
     font-size: larger;
     flex-direction: column;
     flex-wrap: wrap;
@@ -231,13 +264,42 @@ main {
     align-content: space-around;
 }
 
+.sobre_nos:nth-of-type(even) {
+    background-color: red;
+}
+
 #sobrenos h3 img {
     width: 19px;
     margin-left: -25px;
     margin-right: 5px;
 }
 
-#valores{
+#sobre_empresa {
+    padding: 10px;
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+#sobre_empresa div {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#img_empresa img {
+    max-width: 200px;
+}
+
+#valores {
     list-style-position: inside;
 }
 
@@ -312,7 +374,7 @@ h2 img {
 
 }
 
-#dsp{
+#dsp {
     min-height: 100vh;
     display: flex;
     flex-direction: row;
@@ -325,10 +387,10 @@ h2 img {
 .caixa {
     border: 2px solid var(--cor1);
     margin: 60px auto;
-    width: 270px;
+    width: 300px;
     max-width: 350px;
-    height: 80vh;
-    max-height: 90vh;
+    min-height: 66vh;
+    max-height: 70vh;
     background-color: rgba(255, 255, 255, 0.889);
 }
 
@@ -522,7 +584,7 @@ footer p {
     font-size: 0.8em;
 }
 
-button:hover{
+button:hover {
     transition: 800ms;
     background: var(--cor1);
     color: white;
@@ -540,27 +602,91 @@ abbr>a {
     color: white;
     font-weight: bold;
 }
-.sobre_nos p li{
+
+.sobre_nos p li {
     font-family: var(--fonte-titulo);
     font-size: 16px;
 }
-#sobre_empresa{
-    background: white;
+
+/*sobre nos update extra*/
+
+.sconteudo {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+
+.sobre_nos {
     width: 100%;
-    height: 50vh;
+}
+
+.sobre_nos h3 {
+    font-weight: bold;
+    text-indent: 20px;
+}
+
+.imagem {
+    padding: 20px;
+    margin-top: 5px;
+    width: 100%;
+    min-height: 30vh;
+
+}
+
+#imagem0 {
+    background: url(../imagens/photo4.jpeg) no-repeat;
+    background-size: cover;
+
+}
+
+#imagem1 {
+    background: url(../imagens/imagem4.jpg)no-repeat;
+    background-size: cover;
+}
+
+#imagem2 {
+    background: url(../imagens/imagem8.jpg) no-repeat;
+    background-size: cover;
+}
+
+#imagem3 {
+    background: url(../imagens/i01.jpg) no-repeat;
+    background-size: cover;
+}
+
+#imagem4 {
+    background: url(../imagens/i06.jpg)no-repeat;
+    background-size: cover;
+
+}
+
+#logofinal {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
-    
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
 
+#logofinal img {
+    margin: auto;
+}
+
+#logofinal h3 {
+    text-align: center;
 
 }
-#img_empresa{
- margin-left: 10px;   
- width: 50%;
+
+.lm:hover {
+    transition: 500ms;
+    text-decoration: underline;
 }
-#empresa_texto{
-    width: 50%;
-    margin-left: -80px;
+
+.us{
+    width: 100%;
 }
