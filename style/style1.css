@@ -121,25 +121,9 @@ main {
     100% {
         margin-left: -300%;
     }
-
-}
-
-@keyframes tras {
-    0% {
-        margin-left: -300%;
-    }
-
-    100% {
-        margin-left: 0%;
-    }
-
 }
 
 
-#rad0:checked~#slide {
-    animation: tras 1 4s;
-    transition: 1s;
-}
 #rad1:checked~#slide {
     margin-left: 0%;
     transition: 1s;
@@ -159,7 +143,7 @@ main {
 }
 
 #rad4:checked~#slide {
-    animation: frente 1 4s;
+    animation: frente 1 1s;
     transition: 1s;
 
 }

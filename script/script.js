@@ -30,13 +30,15 @@ function menu() {
   }
 }
 
-function trocarSlide(bt) {
+
+function trocarSlide(bt=1) {
   if (bt == 1) {
     frente();
   } else if (bt == 0) {
     tras();
   }
 }
+setInterval(trocarSlide, 10000)
 
 function frente() {
   if (rad1.checked == true) {
@@ -47,13 +49,13 @@ function frente() {
   } else if (rad2.checked == true) {
     rad3.checked = true;
     circulo1.setAttribute("src", "./imagens/circulo.png");
-    circulo3.setAttribute("src", "./imagens/circulo.png");
+    circulo2.setAttribute("src", "./imagens/circulo.png");
     circulo3.setAttribute("src", "./imagens/circulo-preenchido.png");
   } else if (rad3.checked == true) {
     rad4.checked = true;
-    circulo1.setAttribute("src", "./imagens/circulo.png");
+    circulo1.setAttribute("src", "./imagens/circulo-preenchido.png");
     circulo2.setAttribute("src", "./imagens/circulo.png");
-    circulo3.setAttribute("src", "./imagens/circulo-preenchido.png");
+    circulo3.setAttribute("src", "./imagens/circulo.png");
   } else if (rad4.checked == true) {
     rad1.checked = true;
     circulo1.setAttribute("src", "./imagens/circulo-preenchido.png");
@@ -62,13 +64,8 @@ function frente() {
   }
 }
 
-function tras() {r
+function tras() {
   if (rad1.checked == true) {
-    rad0.checked = true;
-    circulo1.setAttribute("src", "./imagens/circulo.png");
-    circulo2.setAttribute("src", "./imagens/circulo.png");
-    circulo3.setAttribute("src", "./imagens/circulo-preenchido.png");
-  } else if (rad0.checked == true) {
     rad3.checked = true;
     circulo1.setAttribute("src", "./imagens/circulo.png");
     circulo3.setAttribute("src", "./imagens/circulo.png");
