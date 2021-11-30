@@ -62,7 +62,7 @@ function frente() {
   }
 }
 
-function tras() {
+function tras() {r
   if (rad1.checked == true) {
     rad0.checked = true;
     circulo1.setAttribute("src", "./imagens/circulo.png");
