@@ -1,96 +1,97 @@
-const divLinhasCredito = document.getElementsByClassName("caixa");
 const botao = document.getElementById("btMenu");
 let on = 0;
+
 const ad1 = document.getElementById("ad1");
 const ad2 = document.getElementById("ad2");
+
+const rad0 = document.getElementById("rad0");
 const rad1 = document.getElementById("rad1");
 const rad2 = document.getElementById("rad2");
 const rad3 = document.getElementById("rad3");
 const rad4 = document.getElementById("rad4");
+
 const circulo1 = document.getElementById("c1");
 const circulo2 = document.getElementById("c2");
 const circulo3 = document.getElementById("c3");
+
+let sconteudo = document.querySelectorAll(".sconteudo");
+let cor = 0;
 
 let nav = document.getElementById("menu");
 function menu() {
   if (on === 0) {
     nav.style.display = "inline-block";
     on = 1;
-    botao.src = "../imagens/menu-x.png";
+    botao.src = "./imagens/menu-x.png";
   } else {
     nav.style.display = "none";
     on = 0;
-    botao.src = "../imagens/menu.png";
+    botao.src = "./imagens/menu.png";
   }
 }
-let s = document.getElementById("slide")
-let c = 0
-setInterval(() => {
-  if (c == 0) {    
-    s.style.animationPlayState = "paused"
-    c = 1
-  } else {
-    c = 0
-    s.style.animationPlayState = "running"
-  }
-}, 5000)
-
 
 function trocarSlide(bt) {
- if (bt == 1) {
-  if (rad3.checked == true) {
-    rad4.checked = true;
-    circulo1.setAttribute("src", "../imagens/circulo-preenchido.png");
-    circulo2.setAttribute("src", "../imagens/circulo.png");
-    circulo3.setAttribute("src", "../imagens/circulo.png");
-  } else if (rad4.checked == true) {
-    rad1.checked = true;
-    circulo1.setAttribute("src", "../imagens/circulo-preenchido.png");
-    circulo2.setAttribute("src", "../imagens/circulo.png");
-    circulo3.setAttribute("src", "../imagens/circulo.png");
-  } else if (rad1.checked == true) {
+  if (bt == 1) {
+    frente();
+  } else if (bt == 0) {
+    tras();
+  }
+}
+
+function frente() {
+  if (rad1.checked == true) {
     rad2.checked = true;
-    circulo1.setAttribute("src", "../imagens/circulo.png");
-    circulo2.setAttribute("src", "../imagens/circulo-preenchido.png");
-    circulo3.setAttribute("src", "../imagens/circulo.png");
+    circulo1.setAttribute("src", "./imagens/circulo.png");
+    circulo2.setAttribute("src", "./imagens/circulo-preenchido.png");
+    circulo3.setAttribute("src", "./imagens/circulo.png");
   } else if (rad2.checked == true) {
     rad3.checked = true;
-    circulo1.setAttribute("src", "../imagens/circulo.png");
-    circulo2.setAttribute("src", "../imagens/circulo.png");
-    circulo3.setAttribute("src", "../imagens/circulo-preenchido.png");
+    circulo1.setAttribute("src", "./imagens/circulo.png");
+    circulo3.setAttribute("src", "./imagens/circulo.png");
+    circulo3.setAttribute("src", "./imagens/circulo-preenchido.png");
+  } else if (rad3.checked == true) {
+    rad4.checked = true;
+    circulo1.setAttribute("src", "./imagens/circulo.png");
+    circulo2.setAttribute("src", "./imagens/circulo.png");
+    circulo3.setAttribute("src", "./imagens/circulo-preenchido.png");
+  } else if (rad4.checked == true) {
+    rad1.checked = true;
+    circulo1.setAttribute("src", "./imagens/circulo-preenchido.png");
+    circulo2.setAttribute("src", "./imagens/circulo.png");
+    circulo3.setAttribute("src", "./imagens/circulo.png");
   }
- } else if(bt == 0){
-  if (rad3.checked == true) {
+}
+
+function tras() {
+  if (rad1.checked == true) {
+    rad0.checked = true;
+    circulo1.setAttribute("src", "./imagens/circulo.png");
+    circulo2.setAttribute("src", "./imagens/circulo.png");
+    circulo3.setAttribute("src", "./imagens/circulo-preenchido.png");
+  } else if (rad0.checked == true) {
+    rad3.checked = true;
+    circulo1.setAttribute("src", "./imagens/circulo.png");
+    circulo3.setAttribute("src", "./imagens/circulo.png");
+    circulo3.setAttribute("src", "./imagens/circulo-preenchido.png");
+  } else if (rad3.checked == true) {
     rad2.checked = true;
-    circulo1.setAttribute("src", "../imagens/circulo.png");
-    circulo2.setAttribute("src", "../imagens/circulo-preenchido.png");
-    circulo3.setAttribute("src", "../imagens/circulo.png");
+    circulo1.setAttribute("src", "./imagens/circulo.png");
+    circulo2.setAttribute("src", "./imagens/circulo-preenchido.png");
+    circulo3.setAttribute("src", "./imagens/circulo.png");
   } else if (rad2.checked == true) {
     rad1.checked = true;
-    circulo1.setAttribute("src", "../imagens/circulo-preenchido.png");
-    circulo2.setAttribute("src", "../imagens/circulo.png");
-    circulo3.setAttribute("src", "../imagens/circulo.png");
-  } else if (rad1.checked == true) {
-    rad4.checked = true;
-    circulo1.setAttribute("src", "../imagens/circulo.png");
-    circulo2.setAttribute("src", "../imagens/circulo.png");
-    circulo3.setAttribute("src", "../imagens/circulo-preenchido.png");
-  } else if (rad4.checked == true) {
-    rad3.checked = true;
-    circulo1.setAttribute("src", "../imagens/circulo.png");
-    circulo2.setAttribute("src", "../imagens/circulo.png");
-    circulo3.setAttribute("src", "../imagens/circulo-preenchido.png");
+    circulo1.setAttribute("src", "./imagens/circulo-preenchido.png");
+    circulo2.setAttribute("src", "./imagens/circulo.png");
+    circulo3.setAttribute("src", "./imagens/circulo.png");
   }
- }
-  
 }
 
 function preencher(st) {
-  st.setAttribute("src", "../imagens/tras-preenchido.png");
+  st.setAttribute("src", "./imagens/tras-preenchido.png");
 }
 
 function seta(st) {
-  st.setAttribute("src", "../imagens/tras.png");
+  st.setAttribute("src", "./imagens/tras.png");
 }
 
 function mudarProv(boatao, prov) {
@@ -131,14 +132,11 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("sticky", window.scrollY > 0);
 });
 
-
-let sconteudo = document.querySelectorAll('.sconteudo')
-let cor = 0
 for (const dv of sconteudo) {
   if (cor == 0) {
-    cor = 1
+    cor = 1;
   } else {
-    dv.style.backgroundColor = 'white'
-    cor = 0
+    dv.style.backgroundColor = "white";
+    cor = 0;
   }
 }

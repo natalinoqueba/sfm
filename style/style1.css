@@ -113,7 +113,7 @@ main {
     display: none;
 }
 
-@keyframes a {
+@keyframes frente {
     0% {
         margin-left: -200%;
     }
@@ -124,8 +124,22 @@ main {
 
 }
 
+@keyframes tras {
+    0% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: 0%;
+    }
+
+}
 
 
+#rad0:checked~#slide {
+    animation: tras 1 4s;
+    transition: 1s;
+}
 #rad1:checked~#slide {
     margin-left: 0%;
     transition: 1s;
@@ -145,7 +159,7 @@ main {
 }
 
 #rad4:checked~#slide {
-    animation: a 1 5s;
+    animation: frente 1 4s;
     transition: 1s;
 
 }
@@ -177,17 +191,17 @@ main {
 }
 
 .slide1 {
-    background-image: url("/imagens/imagem5.jpg");
+    background-image: url("../imagens/imagem5.jpg");
     background-size: cover;
 }
 
 .slide2 {
-    background-image: url("/imagens/imagem4.jpg");
+    background-image: url("../imagens/imagem4.jpg");
     background-size: cover;
 }
 
 .slide3 {
-    background-image: url("/imagens/imagem8.jpg");
+    background-image: url("../imagens/imagem8.jpg");
     background-size: cover;
 }
 
@@ -351,7 +365,7 @@ h2 img {
 }
 
 #creditos {
-    background-image: url("/imagens/i06.jpg");
+    background-image: url("../imagens/i06.jpg");
     background-size: cover;
     text-align: center;
     min-height: 100vh;
