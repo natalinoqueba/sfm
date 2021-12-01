@@ -139,8 +139,8 @@
 
     .caixa {
         position: relative;
-        min-width: 330px;
-        min-height: 73vh;
+        min-width: 300px;
+        min-height: 75vh;
     }
 
     .caixa h3,
