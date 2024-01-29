@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+@keyframes changeimage {
+    from {
+        background: url(../imagens/imagem8.jpg) no-repeat;
+        background-size: contain;
+    }
+
+    to {
+        background: url(../imagens/imagem7.jpg) no-repeat;
+    }
+
+}
+
+@keyframes mover {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+.idv div > p{
+    font-size:25px;
+}
+.idv div > h3{
+    font-size: 30px;
+}
+h1{
+ font-weight: 900;
+}
+
+
+@media screen and (min-width: 750px) {
+  
+    body {
+        font-size: larger;
+        font-family: var(--fonte-padrao);
+        font-size: small;
+        background:url(../imagens/homepage-invest.jpg) ;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+    }
+
+    header {
+        color: white;
+        padding: 10px;
+        display: flex;
+        background-color: transparent;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    header.sticky {
+        transition: 0.2s;
+        background-color: var(--cor5);
+        padding: 0px;
+        border-bottom: 1px solid var(--cor1);
+    }
+
+    header.sticky nav ul li a {
+        color: var(--cor1);
+
+    }
+    
+    #btMenu {
+        display: none;
+    }
+
+    nav {
+        width: fit-content;
+        background: none;
+        animation-name: aparecer;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-iteration-count: 2s;
+        display: inline-block;
+  
+    }
+
+    nav ul {
+        list-style: none;
+       
+        font-size: small;
+    }
+
+    nav ul li {
+        transition: 1s;
+        display: inline;
+        padding: 2px;
+        border: none;
+        animation-name: mover;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        margin-left: 10px;
+    }
+    .texto h1{
+        text-align: center;
+        word-spacing: 2px;
+        font-size: 25px;
+        font-weight: bold;
+        /* background-color: rgba(0, 0, 0, 0.11); */
+        /* box-shadow: 2px 0.5px 1px rgba(0, 0, 0, 0.356); */
+    }
+
+    nav ul li a {
+        font-family:'Montserrat'sans-serif;
+        color:var(--cor3);
+        padding: 2px;
+        border: none;
+        transition-property: background-color, padding, border-radius;
+        transition-duration: 100ms, 1s, 100ms;
+        transition-delay: 100ms;
+        
+    }
+
+    #menu a:hover {
+        padding: 5px;
+        border-radius: 2px;
+        color: var(--cor1);
+    }
+
+    #btMenu {
+        padding-left: 50px;
+    }
+
+
+    
+
+    div>.circulo {
+        margin-top: -40px;
+    }
+
+    .tras {
+        margin-top: -600px;
+
+        border-radius: 50%;
+        position: absolute;
+        left: 5px;
+    }
+
+    #stxt {
+        text-align: justify;
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .give {
+        display: block;
+        width: 50%;
+        float: left;
+        padding: 10px;
+    }
+
+
+    .gives li,
+    .gives h2 {
+        padding: 10px;
+    }
+
+    .frente {
+        margin-top: -600px;
+        border-radius: 50%;
+        position: absolute;
+        right: 5px;
+    }
+
+
+    #creditos {
+        margin-bottom: 10px;
+    }
+
+
+    .caixa {
+        background-size: cover;
+        position: relative;
+        min-width: 360px;
+        /* min-height: 80vh; */
+        border: none;
+        border-radius: 5px;
+    }
+
+    .caixa p {
+        margin-bottom: 10px;
+        padding: 3px;
+    }
+    .caixa:hover {
+     
+        background-size: cover;
+        position: relative;
+        min-width: 400px;
+        /* min-height: 80vh; */
+        transition: .5s;
+        transition-delay: .5s;
+    }
+
+    
+
+    .conteiner {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .conteiner #formulario {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgBx {
+        display: block;
+        position: relative;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .imgBx::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 90%;
+        height: 100%;
+        background-color: var(--cor3);
+        transform-origin: bottom;
+        transform: skewX(50deg) translateX(0%);
+    }
+
+    .imgBx img {
+        width: 100%;
+        max-height: 100%;
+        margin-bottom:-10px ;
+    }
+
+    .aderir {
+        position: absolute;
+        bottom: 2%;
+        left: 20%;
+        transition-property: backgrand-color, padding;
+        box-sizing: content-box;
+    }
+
+    .aderir:hover {
+        bottom: 5px;
+        background-color: var(--cor1);
+        color: var(--cor5);
+        font-weight: bold;
+        padding: 11px;
+        transition-duration: 100ms, 500ms, 100ms;
+        transition-delay: 100ms;
+        transition: 500ms;
+    }
+
+    #local h4 {
+        display: inline-block;
+        margin-left: 80px;
+        padding: 10px;
+    }
+
+    strong {
+        font-style: oblique;
+        font-size: 18px;
+        color: var(--cor1);
+    }
+
+    .maior {
+        font-size: 30px;
+    }
+
+    #logotipo {
+        text-align: center;
+    }
+
+    .sconteudo {
+        min-height: 60vh;
+        padding: 0px 20px 5px 20px;
+        width: 100%;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .sobre_nos {
+        width: 40%;
+    }
+
+    .imagem {
+        width: 40%;
+        min-height: 50vh;
+   
+    }
+
+}
+#sucesso{
+    padding-top: 200px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#sucesso img{
+   
+    width: 10%;
+    height: 20%;
+}
+
+@media screen and (min-height: 800px) {
+    .caixa {
+      
+        font-size: small;
+        width: 100%;
+        min-height: 50vh;
+      
+    background-size: cover;
+        border: none;
+        border-radius: 10px;
+        position: relative;
+        
+        
+    } 
+    .caixa:hover {
+        min-height: 60vh;
+      
+        width: 100%;
+        transition: .1s;
+        transition-delay: .5s;
+        
+    } 
+   
+   
+}
