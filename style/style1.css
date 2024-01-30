@@ -259,12 +259,12 @@ main {
 
 
 #sobre {
-    background-color: var(--cor5);
+    background-color: white;
     margin: auto;
 }
 
 #sobre h2 {
-    padding-top: 30px;
+    padding: 5%;
     text-align: center;
     color: var(--cor1);
 }
@@ -279,15 +279,8 @@ main {
     align-content: space-around;
 }
 
-.sobre_nos:nth-of-type(even) {
-    background-color: red;
-}
 
-#sobrenos h3 img {
-    width: 19px;
-    margin-left: -25px;
-    margin-right: 5px;
-}
+
 
 #sobre_empresa {
     padding: 10px;
@@ -727,6 +720,11 @@ abbr>a {
     font-size: 16px;
 }
 
+.sobre_nos p{
+    line-height: 1.5em;
+}
+
+
 /*sobre nos update extra*/
 
 .sconteudo {
@@ -745,7 +743,7 @@ abbr>a {
 
 .sobre_nos h3 {
     font-weight: bold;
-    text-indent: 20px;
+    text-transform: uppercase   ;
 }
 
 .imagem {
@@ -757,37 +755,40 @@ abbr>a {
 }
 
 #imagem0 {
-    background: url(../imagens/photo4.jpeg) no-repeat;
+    background: url(../imagens/IMG1.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
 
 }
 
 #imagem1 {
-    background: url(../imagens/imagem4.jpg)no-repeat;
+    background: url(../imagens/IMG2.jpg) no-repeat;
+
     background-position: center center;
     background-size: cover;
 
 }
 
 #imagem2 {
-    background: url(../imagens/imagem8.jpg) no-repeat;
+    background: url(../imagens/sobre-img04.jpg) no-repeat;
     background-size: cover;
-
-    background-position: center center;
-
+    background-position: center top;
+    
 }
 
 #imagem3 {
-    background: url(../imagens/fundo-moeda2.jpg) no-repeat;
+    background: url(../imagens/sobre-img08.jpg) no-repeat;
+
     background-position: center center;
     background-size: cover;
 
 }
 
 #imagem4 {
-    background: url(../imagens/fundo-moeda.jpg)no-repeat;
+    background: url(../imagens/sobre-img01.jpg) no-repeat;
+
     background-size: cover;
+    background-position: center center;
 }
 
 
@@ -816,7 +817,7 @@ abbr>a {
 }
 
 .us {
-    width: 100%;
+    width: 90%;
 }
 
 a h4 {

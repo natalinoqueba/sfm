@@ -129,14 +129,14 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("sticky", window.scrollY > 0);
 });
 
-for (const dv of sconteudo) {
-  if (cor == 0) {
-    cor = 1;
-  } else {
-    dv.style.backgroundColor = "white";
-    cor = 0;
-  }
-}
+// for (const dv of sconteudo) {
+//   if (cor == 0) {
+//     cor = 1;
+//   } else {
+//     dv.style.backgroundColor = "white";
+//     cor = 0;
+//   }
+// }
 function submeter(){
   window.location.href = './sucessos.html'
 }
