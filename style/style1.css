@@ -28,6 +28,7 @@ body {
     font-family: var(--fonte-padrao);
     font-size: small;
     /* background-image: url(../imagens/homepage-invest.jpg); */
+    background: url(../imagens/homepage-invest.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -166,6 +167,7 @@ main {
 .texto {
     width: 400%;
     height: 100vh;
+    text-shadow: 1px 1px 1px black;
 }
 
 .idv {
@@ -176,7 +178,7 @@ main {
 
 .idv>div {
     margin: auto;
-    transform: translateY(30vh);
+    transform: translateY(20vh);
     padding: 10px;
     width: 70%;
     /* letter-spacing: 1px; */
@@ -252,8 +254,8 @@ main {
 
 
 .texto p {
-    text-align: justify;
-    padding: 10px;
+    /* text-align: justify; */
+    /* padding: 10px; */
     font-family: var(--fonte-titulo);
 }
 
@@ -295,11 +297,11 @@ main {
 }
 
 #sobre_empresa div {
-    font-size: large;
+    font-size: 1.1em;
     line-height: 1.5em;
     padding: 20px;
     display: flex;
-    width: 80%;
+    width: 90%;
     flex-direction: column;
     align-content: center;
     align-items: center;
@@ -312,7 +314,7 @@ main {
 
 #empresa_texto h3 {
     /* font-weight: 200; */
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     /* color: var(--cor1); */
     padding-bottom: 20px;
 
@@ -322,6 +324,7 @@ main {
     text-align: justify;
     /* color: var(--cor1); */
     /* font-weight: 300; */
+    font-size: .9em;
     font-family: var(--fonte-padrao);
     padding-bottom: 40px;
 }
@@ -378,11 +381,10 @@ h2 img {
 }
 
 #creditos {
-
+    font-size: 2em;
     background-size: cover;
     text-align: center;
     min-height: 100vh;
-
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -416,14 +418,10 @@ h2 img {
 }
 
 .caixa {
-    border: 2px solid var(--cor1);
-    margin: 60px;
-    max-width: 350px;
-    min-height: 66vh;
-    max-height: 40vh;
-    background-color: rgba(255, 255, 255, 0.889);
     width: 350px;
     min-height: 394px;
+    margin: 20px;
+    border: 2px solid var(--cor1);
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
@@ -455,8 +453,8 @@ h2 img {
 
 .title {
     padding-top: 50px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.8rem;
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-size: 2.8rem; */
     font-weight: 600;
     color: white;
     text-shadow: 1px 2px 2px black;
@@ -465,8 +463,8 @@ h2 img {
 }
 
 .description {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-size: 1.6rem; */
     font-weight: 400;
     color: white;
     text-shadow: 1px 2px 2px black;
@@ -478,7 +476,7 @@ h2 img {
 /*formulario*/
 .conteiner {
     position: relative;
-    width: 70%;
+    width: 100%;
     max-width: 1100px;
     padding: 20px;
     padding-top: 30px;
@@ -609,6 +607,7 @@ h2 img {
 
 #contacto h3 {
     padding: 10px;
+    font-size: 1em;
 }
 
 .bt {
@@ -717,10 +716,10 @@ abbr>a {
 
 .sobre_nos p li {
     font-family: var(--fonte-titulo);
-    font-size: 16px;
+    /* font-size: 16px; */
 }
 
-.sobre_nos p{
+.sobre_nos p {
     line-height: 1.5em;
 }
 
@@ -729,11 +728,14 @@ abbr>a {
 
 .sconteudo {
     display: flex;
+    width: 85%;
+    margin: 2em auto;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
     align-items: center;
-    padding: 30px;
+    font-size: .8em;
+    text-align: justify;
 }
 
 
@@ -742,8 +744,7 @@ abbr>a {
 }
 
 .sobre_nos h3 {
-    font-weight: bold;
-    text-transform: uppercase   ;
+    text-transform: uppercase;
 }
 
 .imagem {
@@ -751,7 +752,7 @@ abbr>a {
     margin-top: 5px;
     width: 100%;
     min-height: 30vh;
-
+    display: none;
 }
 
 #imagem0 {
@@ -773,7 +774,7 @@ abbr>a {
     background: url(../imagens/sobre-img04.jpg) no-repeat;
     background-size: cover;
     background-position: center top;
-    
+
 }
 
 #imagem3 {
@@ -882,7 +883,7 @@ a h4 {
 }
 
 .logoparceiros>div>a>img {
-    width: 60%;
+    width: 70%;
 }
 
 .tituloparceiro {

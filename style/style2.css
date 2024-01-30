@@ -24,17 +24,17 @@
     }
 }
 
-.idv div>p {
+/* .idv div>p {
     font-size: 25px;
 }
 
 .idv div>h3 {
     font-size: 30px;
-}
+} */
 
-h1 {
+/* h1 {
     font-weight: 900;
-}
+} */
 
 
 @media screen and (min-width: 750px) {
@@ -104,7 +104,7 @@ h1 {
     .texto h1 {
         text-align: center;
         word-spacing: 2px;
-        font-size: 25px;
+        /* font-size: 25px; */
         font-weight: bold;
         /* background-color: rgba(0, 0, 0, 0.11); */
         /* box-shadow: 2px 0.5px 1px rgba(0, 0, 0, 0.356); */
@@ -207,6 +207,7 @@ h1 {
     .conteiner {
         flex-direction: row;
         justify-content: space-around;
+        width: 70%;
     }
 
     .conteiner #formulario {
@@ -296,10 +297,34 @@ h1 {
     }
 
     .imagem {
-        width: 30vw;
-        height: 75vh;
+        width: 35vw;
+        height: 70vh;
+        display: block;
     }
 
+    .idv>div {
+        margin: auto;
+        transform: translateY(30vh);
+    }
+
+    #sobre_empresa div {
+        font-size: large;
+        width: 80%;
+
+    }
+
+    .texto {
+        font-size: 1.4em;
+        text-align: justify;
+    }
+
+    .logoparceiros>div>a>img {
+        width: 50%;
+    }
+
+    .sobre_nos p {
+        font-size: 1.2em;
+    }
 }
 
 #sucesso {
